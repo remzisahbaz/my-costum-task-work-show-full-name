@@ -1,8 +1,22 @@
-# my-costum-task-work-show-full-name
-jbpm business central custom task wok item handler 
+#my-costum-task-work-show-full-name
+
+**Custom Tasks in jBPM with work item handlers**
+
+**Run the following command to create a work item handler project: :**   
+`
+mvn archetype:generate
+-DarchetypeGroupId=org.jbpm
+-DarchetypeArtifactId=jbpm-workitems-archetype
+-DarchetypeVersion=7.61.0.Final
+-DgroupId=org.acme
+-DartifactId=mycustomtask
+-Dversion=1.0.0-SNAPSHOT
+-DclassPrefix=MyCustomTaskShowFullname`
+
 
 
 `1- git clone ...`
+
 `2- mvn clean package test -DforkCount=0` / `mvn clean install test -DforkCount=0`
 
 `3- ` ![img.png](mycustomtaskshowfullname%2Fss%2Fimg.png) 
