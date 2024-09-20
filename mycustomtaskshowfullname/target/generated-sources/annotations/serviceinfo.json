@@ -12,32 +12,32 @@
 
             ],
                 "isaction" : "true",
-                "actiontitle" : "Sample Title",
+                "actiontitle" : "Show full name",
             "requiresauth" : "true",
                 "authparams" : [
                                            {
-                                               "name" : "SampleParam"
+                                               "name" : "First name"
                                            }
                     ,{
-                                               "name" : "SampleParamTwo"
+                                               "name" : "Last name"
                                            }
 
                 ],
                 "authreferencesite" : "referenceSiteURL",
             "parameters" : [
                                    {
-                                       "name" : "SampleParam",
+                                       "name" : "FirstName",
                                        "type" : "new StringDataType()"
                                    }
                 ,{
-                                       "name" : "SampleParamTwo",
+                                       "name" : "LastName",
                                        "type" : "new StringDataType()"
                                    }
 
             ],
             "results" : [
                                    {
-                                       "name" : "SampleResult",
+                                       "name" : "FullName",
                                        "type" : "new StringDataType()"
                                    }
 

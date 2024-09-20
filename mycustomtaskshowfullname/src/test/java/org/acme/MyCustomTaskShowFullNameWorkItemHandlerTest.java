@@ -24,21 +24,17 @@ import static org.junit.Assert.*;
 public class MyCustomTaskShowFullNameWorkItemHandlerTest extends AbstractBaseTest {
 
     @Test
-    public void testHandler() throws Exception {
+    public void testHandler() {
         WorkItemImpl workItem = new WorkItemImpl();
-        workItem.setParameter("SampleParam", "testParamValue");
-        workItem.setParameter("SampleParamTwo", "testParamValue");
-
+        workItem.setParameter("FirstName", "Remzi");
+        workItem.setParameter("LastName", "ŞAHBAZ");
         TestWorkItemManager manager = new TestWorkItemManager();
-
-        MyCustomTaskShowFullNameWorkItemHandler handler = new MyCustomTaskShowFullNameWorkItemHandler("testParamValue", "testParamValue");
+        MyCustomTaskShowFullNameWorkItemHandler handler = new MyCustomTaskShowFullNameWorkItemHandler();
         handler.setLogThrownException(true);
-        handler.executeWorkItem(workItem,
-                                manager);
-
+        handler.executeWorkItem(workItem, manager);
         assertNotNull(manager.getResults());
-        assertEquals(1,
-                     manager.getResults().size());
+        assertEquals(1, manager.getResults().size());
+        assertEquals("Remzi ŞAHBAZ", manager.getResults().get(0L).get("FullName"));
         assertTrue(manager.getResults().containsKey(workItem.getId()));
     }
 }

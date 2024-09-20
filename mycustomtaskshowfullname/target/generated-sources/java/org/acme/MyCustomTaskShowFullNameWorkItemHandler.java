@@ -35,21 +35,21 @@ import org.jbpm.process.workitem.core.util.WidMavenDepends;
         documentation = "mycustomtaskshowfullname/index.html",
         category = "mycustomtaskshowfullname",
         icon = "MyCustomTaskShowFullNameDefinitions.png",
-        parameters={
-            @WidParameter(name="SampleParam", required = true),
-            @WidParameter(name="SampleParamTwo", required = true)
+        parameters = {
+                @WidParameter(name = "FirstName"),
+                @WidParameter(name = "LastName")
         },
-        results={
-            @WidResult(name="SampleResult")
+        results = {
+                @WidResult(name = "FullName")
         },
         mavenDepends={
             @WidMavenDepends(group="org.acme", artifact="mycustomtaskshowfullname", version="5.0.0-SNAPSHOT")
         },
         serviceInfo = @WidService(category = "mycustomtaskshowfullname", description = "Workitem Desciption",
                 keywords = "",
-                action = @WidAction(title = "Sample Title"),
-                authinfo = @WidAuth(required = true, params = {"SampleParam", "SampleParamTwo"},
-                        paramsdescription = {"SampleParam", "SampleParamTwo"},
+                action = @WidAction(title = "Show full name"),
+                authinfo = @WidAuth(required = true, params = {"FirstName", "LastName"},
+                        paramsdescription = {"First name", "Last name"},
                         referencesite = "referenceSiteURL")
         )
 )
@@ -67,19 +67,13 @@ public class MyCustomTaskShowFullNameWorkItemHandler extends AbstractLogOrThrowW
     public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
         try {
             RequiredParameterValidator.validate(this.getClass(), workItem);
-
-            // sample parameters
-            sampleParam = (String) workItem.getParameter("SampleParam");
-            sampleParamTwo = (String) workItem.getParameter("SampleParamTwo");
-
-            // complete workitem impl...
-
-            // return results
-            String sampleResult = sampleParam +" " + sampleParamTwo;
-            Map<String, Object> results = new HashMap<String, Object>();
-            results.put("SampleResult", sampleResult);
+            String firstName = (String) workItem.getParameter("FirstName"); // Gets the "FirstName" parameter
+            String lastName = (String) workItem.getParameter("LastName"); // Gets the "LastName" parameter
+            String fullName = firstName + " " + lastName; // Concatenates the "firstName" and "lastName"
+            Map results = new HashMap();
+            results.put("FullName", fullName); // Adds "fullName" to the "results" object
             manager.completeWorkItem(workItem.getId(), results);
-        } catch(Throwable cause) {
+        } catch (Throwable cause) {
             handleException(cause);
         }
     }

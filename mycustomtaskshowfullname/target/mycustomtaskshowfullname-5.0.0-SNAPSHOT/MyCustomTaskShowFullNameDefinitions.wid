@@ -8,12 +8,12 @@
             "documentation" : "mycustomtaskshowfullname/index.html",
 
             "parameters" : [
-                                "SampleParam" : new StringDataType()
-                ,"SampleParamTwo" : new StringDataType()
+                                "FirstName" : new StringDataType()
+                ,"LastName" : new StringDataType()
 
             ],
             "results" : [
-                                "SampleResult" : new StringDataType()
+                                "FullName" : new StringDataType()
 
             ],
             "mavenDependencies" : [
