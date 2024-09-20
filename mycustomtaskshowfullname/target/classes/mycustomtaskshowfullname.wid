@@ -1,0 +1,27 @@
+[
+        [
+            "name" : "MyCustomTaskShowFullNameDefinitions",
+            "displayName" : "MyCustomTaskShowFullNameDefinitions",
+            "category" : "mycustomtaskshowfullname",
+            "description" : "",
+            "defaultHandler" : "mvel: new org.acme.MyCustomTaskShowFullNameWorkItemHandler()",
+            "documentation" : "mycustomtaskshowfullname/index.html",
+
+            "parameters" : [
+                                "SampleParam" : new StringDataType()
+                ,"SampleParamTwo" : new StringDataType()
+
+            ],
+            "results" : [
+                                "SampleResult" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "org.acme:mycustomtaskshowfullname:5.0.0-SNAPSHOT"
+
+            ],
+            "icon" : "MyCustomTaskShowFullNameDefinitions.png"
+
+        ]
+
+]

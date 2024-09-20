@@ -1,0 +1,55 @@
+{
+        "name" : "MyCustomTaskShowFullNameDefinitions",
+        "displayName" : "MyCustomTaskShowFullNameDefinitions",
+        "defaultHandler" : "mvel: new org.acme.MyCustomTaskShowFullNameWorkItemHandler()",
+        "documentation" : "mycustomtaskshowfullname/index.html",
+        "module" : "mycustomtaskshowfullname",
+        "icon" : "MyCustomTaskShowFullNameDefinitions.png",
+            "category" : "mycustomtaskshowfullname",
+            "description" : "Workitem Desciption",
+            "keywords" : [
+                                ""
+
+            ],
+                "isaction" : "true",
+                "actiontitle" : "Sample Title",
+            "requiresauth" : "true",
+                "authparams" : [
+                                           {
+                                               "name" : "SampleParam"
+                                           }
+                    ,{
+                                               "name" : "SampleParamTwo"
+                                           }
+
+                ],
+                "authreferencesite" : "referenceSiteURL",
+            "parameters" : [
+                                   {
+                                       "name" : "SampleParam",
+                                       "type" : "new StringDataType()"
+                                   }
+                ,{
+                                       "name" : "SampleParamTwo",
+                                       "type" : "new StringDataType()"
+                                   }
+
+            ],
+            "results" : [
+                                   {
+                                       "name" : "SampleResult",
+                                       "type" : "new StringDataType()"
+                                   }
+
+            ],
+            "mavenDependencies" : [
+                                   {
+                                       "groupId" : "org.acme",
+                                       "artifactId" : "mycustomtaskshowfullname",
+                                       "version" : "5.0.0-SNAPSHOT"
+                                   }
+
+            ]
+}
+
+,

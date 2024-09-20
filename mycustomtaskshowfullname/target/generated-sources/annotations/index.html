@@ -1,0 +1,129 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    <div class="container">
+        <a name="MyCustomTaskShowFullNameDefinitions"></a><div class="card">
+                <div class="card-header"><b>1. MyCustomTaskShowFullNameDefinitions Workitem Handler</b></div>
+                <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Display Name</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Handler</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>MyCustomTaskShowFullNameDefinitions</td>
+                <td>MyCustomTaskShowFullNameDefinitions</td>
+                <td>mycustomtaskshowfullname</td>
+                <td></td>
+                <td>mvel: new org.acme.MyCustomTaskShowFullNameWorkItemHandler()</td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <b>Parameters</b>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Required</th>
+            </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>SampleParam</td>
+                        <td>new StringDataType()</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>SampleParamTwo</td>
+                        <td>new StringDataType()</td>
+                        <td>true</td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <br/>
+        <b>Results</b>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>SampleResult</td>
+                        <td>new StringDataType()</td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <br/>
+        <b>Maven Dependencies</b>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Group</th>
+                <th>Artifact</th>
+                <th>Version</th>
+            </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>org.acme</td>
+                        <td>mycustomtaskshowfullname</td>
+                        <td>5.0.0-SNAPSHOT</td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <br/>
+            <b>Authentication Information</b>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Auth Required</th>
+                    <th>Params</th>
+                    <th>Params Description</th>
+                    <th>Reference Site</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>true</td>
+                    <td>
+                                        SampleParam<br/>
+                                        SampleParamTwo<br/>
+
+                    </td>
+                    <td>
+                                        SampleParam<br>
+                                        SampleParamTwo<br>
+
+                    </td>
+                    <td>referenceSiteURL</td>
+                 </tr>
+                 </tbody>
+            </table>
+            <br/>
+        </div></div><p/>
+
+    </div>
+    </body>
+</html>
